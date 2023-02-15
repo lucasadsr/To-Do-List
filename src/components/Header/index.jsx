@@ -1,11 +1,11 @@
 import './Header.module.css'
 import Form from '../Form'
 
-const Header = () => {
+const Header = ({ handleNewTask }) => {
   return (
     <header>
       <h1>To do list</h1>
-      <Form />
+      <Form handleNewTask={handleNewTask} />
     </header>
   )
 }
