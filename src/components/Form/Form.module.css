@@ -1,0 +1,35 @@
+.box {
+    width: 32rem;
+    margin: 0 auto;
+    background-color: #181a1a;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 18px;
+}
+
+.input {
+    background-color: #181a1a;
+    color: rgb(247, 226, 223);
+    border: none;
+    padding: 1em;
+    width: 80%;
+    font-size: 1em;
+    outline: none;
+    border-radius: 18px;
+}
+
+.button {
+    width: 20%;
+    cursor: pointer;
+    background: rgb(173, 255, 47);
+    border: none;
+    border-end-end-radius: 18px;
+    border-start-end-radius: 18px;
+    font-size: 1.3em;
+    transition: all 200ms;
+}
+
+.button:hover {
+    background: rgb(135, 200, 37);
+    transition: all 200ms;
+}

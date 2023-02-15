@@ -1,0 +1,12 @@
+header {
+    padding-top: 6rem;
+}
+
+h1 {
+    color: #FEFEFE;
+    letter-spacing: 0.2rem;
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0;
+    padding-block: .4em;
+}
