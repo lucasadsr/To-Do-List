@@ -1,10 +1,12 @@
 import Header from "./components/Header";
-import Input from "./components/Form";
+import Task from "./components/Task";
 
 function App() {
+
   return (
     <div>
       <Header />
+      <Task description="teste" />
     </div>
   );
 }

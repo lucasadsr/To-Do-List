@@ -1,0 +1,29 @@
+.task {
+    display: flex;
+    max-width: 32rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 1em 1.5em;
+    gap: 1em;
+    margin-block: 1em;
+}
+
+.task_des {
+    overflow-wrap: anywhere;
+    text-align: justify;
+    color: #DEDEDE;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: .5em;
+}
