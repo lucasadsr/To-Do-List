@@ -11,6 +11,12 @@
     margin-block: 1em;
 }
 
+.completed {
+    opacity: 0.4;
+    text-decoration: line-through;
+    text-decoration-color: rgb(173, 255, 47);
+}
+
 .task_des {
     overflow-wrap: anywhere;
     text-align: justify;
