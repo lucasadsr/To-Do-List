@@ -9,6 +9,12 @@
 body {
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  background: linear-gradient( 100deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% );
+  background: linear-gradient( 100deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% ) no-repeat;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-inline: 1em;
+  }
 }

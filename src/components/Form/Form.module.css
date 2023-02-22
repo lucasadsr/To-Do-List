@@ -33,3 +33,9 @@
     background: rgb(135, 200, 37);
     transition: all 200ms;
 }
+
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+    }
+}
