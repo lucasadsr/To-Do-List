@@ -16,12 +16,16 @@ function App() {
     console.log(taskDesc)
   }
 
+  const handleDeleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id))
+  }
+
   return (
     <div>
       <Header handleNewTask={handleNewTask} />
       {tasks.map((task) => {
         return (
-          <Task key={task.id} description={task.desc} />
+          <Task key={task.id} description={task.desc} handleDeleteTask={handleDeleteTask} id={task.id} />
         )
       })}
     </div>
