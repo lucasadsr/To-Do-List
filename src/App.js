@@ -9,12 +9,16 @@ function App() {
 
   const handleNewTask = (event, taskDesc) => {
     event.preventDefault()
-    setTasks([...tasks, {
-      id: v4(),
-      desc: taskDesc,
-      completed: false
-    }])
-    console.log(taskDesc)
+
+    if (processTaskDescription(taskDesc) !== false) {
+      setTasks([...tasks, {
+        id: v4(),
+        desc: taskDesc,
+        completed: false
+      }])
+    } else {
+      alert("Enter a valid task!")
+    }
   }
 
   const handleDeleteTask = (id) => {
@@ -27,6 +31,15 @@ function App() {
         id === task.id ? {...task, completed: !task.completed} : task
       ))
     )
+  }
+
+  const processTaskDescription = (desc) => {
+    const newDesc = desc.trim()
+    if (newDesc === '') {
+      return false
+    } else {
+      return newDesc
+    }
   }
 
   return (
