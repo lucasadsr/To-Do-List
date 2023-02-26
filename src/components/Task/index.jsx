@@ -3,7 +3,7 @@ import { BsCheckCircleFill, BsFillTrashFill } from 'react-icons/bs'
 
 const Task = ({ task, handleDeleteTask, handleTaskStatus }) => {
     return (
-        <div className={`${styles.task} ${task.completed && styles.completed}`}>
+        <div className={`${styles.task} ${task.completed ? styles.completed : ''}`}>
             <p className={styles.task_des}>{task.desc}</p>
             <div className={styles.icons}>
                 <button onClick={() => handleTaskStatus(task.id)}>

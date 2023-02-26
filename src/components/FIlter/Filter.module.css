@@ -1,0 +1,15 @@
+li {
+    list-style: none;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 200ms;
+}
+
+li.activated {
+    background: rgb(173, 255, 47);
+    color: black;
+    transition: 200ms;
+}

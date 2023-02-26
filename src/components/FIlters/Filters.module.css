@@ -1,0 +1,26 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em auto;
+    width: 32rem;
+    color: #DEDEDE;
+}
+
+.filters p {
+    text-align: left;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .filters {
+        width: 100%;
+    }
+}
