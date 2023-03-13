@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Task from "./components/Task";
 import { v4 } from "uuid";
 
+const LOCAL_STORAGE_KEY = 'tasks'
+
 function App() {
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
@@ -21,11 +23,25 @@ function App() {
     }
   ]);
 
+  // local storage feature
+  useEffect(() => {
+    const localStorageTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
+
+    if(localStorageTasks) {
+      setTasks(JSON.parse(localStorageTasks));
+    }
+  }, []);
+
+  const saveTasks = (newTasks) => {
+    setTasks(newTasks);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+  };
+
   const handleNewTask = (event, taskDesc) => {
     event.preventDefault();
 
     if (processTaskDescription(taskDesc) !== false) {
-      setTasks([...tasks, {
+      saveTasks([...tasks, {
         id: v4(),
         desc: taskDesc,
         completed: false
@@ -36,11 +52,11 @@ function App() {
   };
 
   const handleDeleteTask = (id) => {
-    setTasks(tasks.filter(task => task.id !== id));
+    saveTasks(tasks.filter(task => task.id !== id));
   };
 
   const handleTaskStatus = (id) => {
-    setTasks(
+    saveTasks(
       tasks.map((task) => (
         id === task.id ? { ...task, completed: !task.completed } : task
       ))
